@@ -170,7 +170,7 @@ function Home() {
               className="shadow-elegant rounded-xl object-cover"
             />
             <ul className="divide-y divide-border/60">
-              {menu[1].items.map((item) => (
+              {(menu[1]?.items ?? []).map((item) => (
                 <li key={item.name} className="flex items-baseline justify-between gap-6 py-5">
                   <div>
                     <p className="text-lg">{item.name}</p>
