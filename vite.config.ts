@@ -5,6 +5,8 @@ export default defineConfig({
     base: "/Le_Rocher/",
   },
 
+  nitro: false,
+
   tanstackStart: {
     spa: {
       enabled: true,
