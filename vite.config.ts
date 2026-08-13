@@ -9,9 +9,5 @@ export default defineConfig({
     spa: {
       enabled: true,
     },
-
-    server: {
-      entry: "server",
-    },
   },
 });
