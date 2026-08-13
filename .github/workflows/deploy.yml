@@ -34,7 +34,7 @@ jobs:
       - name: Préparer le site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.output/public
 
       - name: Publier le site
         uses: actions/deploy-pages@v4
