@@ -28,13 +28,18 @@ jobs:
       - name: Construire le site
         run: bun run build
 
+      - name: Préparer le fallback SPA
+        run: |
+          cp ./dist/client/index.html ./dist/client/404.html
+          touch ./dist/client/.nojekyll
+
       - name: Configurer GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Préparer le site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist/client
 
       - name: Publier le site
         uses: actions/deploy-pages@v4
